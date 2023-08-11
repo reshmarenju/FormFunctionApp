@@ -17,7 +17,7 @@ public class DataContext : DbContext
     public DbSet<EventROBsRow> EventROBsRows { get; set; }
     public DbSet<Robs> Robs { get; set; }
     public DbSet<Rob> Rob { get; set; }
-    public DbSet<Allocation> Allocations { get; set; }
+    public DbSet<Allocation> Allocation { get; set; }
     public DbSet<BerthingUnberthingDetails> BerthingUnberthingDetails { get; set; }
     public DbSet<BerthUnberthdetailsRow> BerthUnberthdetailsRows { get; set; }
     public DbSet<FuelsRows> FuelsRows { get; set; }
@@ -26,7 +26,7 @@ public class DataContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Define SFPM_Form_Id as the primary key for the Forms table
-        modelBuilder.Entity<Form>()
-            .HasKey(f => f.SFPM_Form_Id);
+        //modelBuilder.Entity<Form>()
+        //    .HasKey(f => f.SFPM_Form_Id);
     }
 }
